@@ -128,6 +128,8 @@ const firstQuestionText = document.getElementById('firstQuestionText');
 const firstQuestionSubtitle = document.getElementById('firstQuestionSubtitle');
 const firstYesBtn = document.getElementById('firstYesBtn');
 const firstNoBtn = document.getElementById('firstNoBtn');
+const questionSection = document.getElementById('questionSection');
+const successSection = document.getElementById('successSection');
 
 let noClickCount = 0;
 
@@ -170,8 +172,7 @@ firstNoBtn.addEventListener('click', () => {
 // ==========================================
 const yesBtn = document.getElementById('yesBtn');
 const noBtn = document.getElementById('noBtn');
-const questionSection = document.getElementById('questionSection');
-const successSection = document.getElementById('successSection');
+
 
 let confetti;
 
