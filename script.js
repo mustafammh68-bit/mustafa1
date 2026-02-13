@@ -207,64 +207,6 @@ document.querySelector('.buttons').style.position = 'relative';
 document.querySelector('.buttons').style.minHeight = '200px';
 
 // ==========================================
-// Photo Album Functionality
-// ==========================================
-const continueBtn = document.getElementById('continueBtn');
-const albumSection = document.getElementById('albumSection');
-const photoGrid = document.getElementById('photoGrid');
-const fileInput = document.getElementById('fileInput');
-
-let currentPhotoSlot = null;
-const numberOfPhotos = 6;
-
-// Create photo slots
-function createPhotoSlots() {
-    for (let i = 0; i < numberOfPhotos; i++) {
-        const slot = document.createElement('div');
-        slot.className = 'photo-slot';
-        slot.innerHTML = '<div class="photo-placeholder">📷</div>';
-        slot.dataset.index = i;
-
-        slot.addEventListener('click', () => {
-            currentPhotoSlot = slot;
-            fileInput.click();
-        });
-
-        photoGrid.appendChild(slot);
-    }
-}
-
-// Handle file selection
-fileInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (file && currentPhotoSlot) {
-        const reader = new FileReader();
-
-        reader.onload = (event) => {
-            const img = document.createElement('img');
-            img.src = event.target.result;
-            img.alt = 'Our memory';
-
-            // Clear placeholder and add image
-            currentPhotoSlot.innerHTML = '';
-            currentPhotoSlot.appendChild(img);
-            currentPhotoSlot.classList.add('has-photo');
-        };
-
-        reader.readAsDataURL(file);
-    }
-
-    // Reset file input
-    fileInput.value = '';
-});
-
-// Continue button - Show album section
-continueBtn.addEventListener('click', () => {
-    successSection.classList.add('hidden');
-    albumSection.classList.remove('hidden');
-});
-
-// ==========================================
 // Music Player Functionality
 // ==========================================
 const musicBtn = document.getElementById('musicBtn');
@@ -300,5 +242,4 @@ closeMusicBtn.addEventListener('click', () => {
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
     createFloatingHearts();
-    createPhotoSlots();
 });

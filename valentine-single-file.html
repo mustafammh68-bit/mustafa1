@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special Valentine's Day message for someone special">
+    <title>Will you be my Valentine? 💕</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* All CSS embedded here */
+        $ {
+            require('fs').readFileSync('style.css', 'utf8')
+        }
+    </style>
+</head>
+
+<body>
+    <!-- All HTML content here -->
+    ${require('fs').readFileSync('index.html', 'utf8').match(/
+
+    <body>([\s\S]*)<\ /body>/)[1]}
+
+            <script>
+        // All JavaScript embedded here
+        ${ require('fs').readFileSync('script.js', 'utf8') }
+            </script>
+    </body>
+
+</html>
