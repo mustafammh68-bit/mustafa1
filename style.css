@@ -233,10 +233,23 @@ body {
     font-family: var(--font-decorative);
     font-size: 3rem;
     color: var(--color-white);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     animation: pulse 2s ease-in-out infinite;
 }
+
+.question-subtitle {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 /* ==========================================
    Buttons
